@@ -1,29 +1,67 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
-  const routes = [
+const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+    path: "/about",
+    name: "About",
+
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+  },
+  {
+    path: "/signin",
+    name: "SignIn",
+
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/SignIn.vue"),
+  },
+
+  {
+    path: "/login",
+    name: "Login",
+
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Login.vue"),
+  },
+
+  {
+    path: "/user",
+    name: "UserAccount",
+
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/UserAccount.vue"),
+  },
+
+  {
+    path: "/nda",
+    name: "GenerateNDA",
+
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/GenerateNDA.vue"),
+  },
+
+  {
+    path: "/ndadoc",
+    name: "NDA",
+
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/NDA.vue"),
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
