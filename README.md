@@ -1,4 +1,4 @@
-# web_app
+# lawyerUp
 
 ## Project setup
 ```
