@@ -1,21 +1,21 @@
 <template>
-  <div class="home">
+  <div class="signed">
     <div>
       <MobileHeader />
     </div>
 
-    <div class="signature-container">
-      <p>Sign under the line below</p>
-
-      <div class="signature-box">
-        <hr />
-      </div>
+    <div class="non-disclosure-agreement">
+      <h3>NDA signed and safe</h3>
     </div>
-    <br /><br />
+
+    <div class="logo">
+      <img src="../assets/verified.png" alt="" />
+    </div>
+
     <Button
       v-on:handleClick="this.handleSearchClick"
       class="btn"
-      label="Submit Signature"
+      label="Counter-Sign"
       width="50%"
     />
   </div>
@@ -42,22 +42,36 @@ export default {
     max-width: 100%;
   }
 
-  .signature-container {
-    height: 50vh;
-    border: 1px solid gray;
+  .non-disclosure-agreement {
+    text-align: center;
+    font-size: 16px;
+    padding: 0 5px;
+    margin: 20px 0;
 
-    hr {
+    h3 {
+      margin: 10px 0;
     }
   }
 
-  button {
-    margin: 0 5rem;
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
   }
 
   .home {
     * {
       padding: 12px;
     }
+  }
+
+  button{
+      margin: 0 5rem;
+  }
+
+  img {
+    border: 1px solid gray;
+    width: 50%;
+    margin: 4rem 5.5rem;
   }
 }
 </style>

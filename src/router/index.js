@@ -20,7 +20,6 @@ const routes = [
   {
     path: "/signin",
     name: "SignIn",
-
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/SignIn.vue"),
   },
@@ -28,7 +27,6 @@ const routes = [
   {
     path: "/login",
     name: "Login",
-
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/Login.vue"),
   },
@@ -36,7 +34,6 @@ const routes = [
   {
     path: "/user",
     name: "UserAccount",
-
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/UserAccount.vue"),
   },
@@ -44,7 +41,6 @@ const routes = [
   {
     path: "/nda",
     name: "GenerateNDA",
-
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/GenerateNDA.vue"),
   },
@@ -52,9 +48,28 @@ const routes = [
   {
     path: "/ndadoc",
     name: "NDA",
+    component: () => import(/* webpackChunkName: "about" */ "../views/NDA.vue"),
+  },
 
+  {
+    path: "/sign",
+    name: "SubmitSignature",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/NDA.vue"),
+      import(/* webpackChunkName: "about" */ "../views/SubmitSignature.vue"),
+  },
+
+  {
+    path: "/countersign",
+    name: "CounterSign",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/CounterSign.vue"),
+  },
+
+  {
+    path: "/signed",
+    name: "SignedNDA",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/SignedNDA.vue"),
   },
 ];
 
